@@ -28,6 +28,9 @@ int main() {
     printf("after += s: %s\n", a.c_str());
     a += "777";
     printf("after += 777: %s\n", a.c_str());
+    string b = "888";
+    a += b;
+    printf("after += b: %s\n", a.c_str());
     a.clear();
     printf("clear a: %s\n", a.c_str());
     return 0;
