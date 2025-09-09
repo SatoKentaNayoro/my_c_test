@@ -97,3 +97,10 @@ clean:
 run: all
 	./$(OUTPUTMAIN)
 	@echo Executing 'run: all' complete!
+
+runfile:
+	@if [ -z "$(FILE)" ]; then \
+		echo "Usage: make runfile FILE=xxx.cpp"; \
+	else \
+		$(CXX) $(CXXFLAGS) $(SRC)/$(FILE) -o $(OUTPUT)/a.out && ./$(OUTPUT)/a.out; \
+	fi
