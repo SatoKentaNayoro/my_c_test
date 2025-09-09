@@ -24,6 +24,8 @@ int main() {
       return tolower(c);
     });
     printf("tolower a: %s\n", a.c_str());
+    a += 's';
+    printf("after += s: %s\n", a.c_str());
     a.clear();
     printf("clear a: %s\n", a.c_str());
     return 0;
